@@ -1,3 +1,4 @@
+<img width="720" height="1560" alt="home" src="https://github.com/user-attachments/assets/8f83f6af-b8ba-40fb-8248-2d11bd557ad6" />
 # Kuis Pintar
 
 ## Identitas Mahasiswa
@@ -34,7 +35,7 @@ Flutter, Dart, package `provider` (state management).
 ### Screenshot
 | Beranda | Kuis | Hasil |
 |---|---|---|
-| ![Beranda](screenshots/home.png) | ![Kuis](screenshots/quiz.png) | ![Hasil](screenshots/result.png) |
+| ![Beranda](home.png) | ![Kuis](quiz.png) | ![Hasil](result.png) |
 
 
 
