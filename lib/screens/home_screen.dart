@@ -4,6 +4,7 @@ import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 import '../providers/quiz_provider.dart';
+import 'quiz_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,9 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   context.read<QuizProvider>().start(_nameController.text);
 
-  
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text('Halo, ${_nameController.text.trim()}!')),
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (_) => const QuizScreen()),
   );
 }
 
