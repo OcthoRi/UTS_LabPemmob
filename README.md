@@ -39,7 +39,7 @@ Flutter, Dart, package `provider` (state management).
 
 
 ### Mockup / Prototype
-(link Figma)
+(https://www.figma.com/design/9Mxy9M8KSqVtjCUtYeHfdT/Kuis_app?node-id=0-1&t=iTYTPFui6udtxVxt-1)
 
 ### Video Presentasi
 (link Google Drive)
