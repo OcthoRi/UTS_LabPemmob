@@ -5,6 +5,7 @@ import '../theme/app_theme.dart';
 import '../widgets/option_tile.dart';
 import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
+import 'result_screen.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({super.key});
@@ -74,19 +75,17 @@ class QuizScreen extends StatelessWidget {
               icon: p.isLast ? Icons.emoji_events : Icons.arrow_forward,
               
               onPressed: !p.isAnswered
-                  ? null
-                  : () {
-                      if (p.isLast) {
-                        
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Kuis Selesai!'),
-                          ),
-                        );
-                      } else {
-                        p.next();
-                      }
-                    },
+    ? null
+    : () {
+        if (p.isLast) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const ResultScreen()),
+          );
+        } else {
+          p.next();
+        }
+      },
             ),
           ],
         ),
