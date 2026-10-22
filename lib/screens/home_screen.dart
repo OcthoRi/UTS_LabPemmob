@@ -5,6 +5,7 @@ import '../widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 import '../providers/quiz_provider.dart';
 import 'quiz_screen.dart';
+import '../widgets/theme_toggle_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -40,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final cs = Theme.of(context).colorScheme;
 
     return Scaffold(
+       appBar: AppBar(actions: const [ThemeToggleButton()]),
       body: PageContainer(
         child: Form(
           key: _formKey,

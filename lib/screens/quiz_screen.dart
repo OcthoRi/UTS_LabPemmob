@@ -6,6 +6,7 @@ import '../widgets/option_tile.dart';
 import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
 import 'result_screen.dart';
+import '../widgets/theme_toggle_button.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({super.key});
@@ -25,6 +26,7 @@ class QuizScreen extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
+        actions: const [ThemeToggleButton()],
       ),
       body: PageContainer(
         child: Column(

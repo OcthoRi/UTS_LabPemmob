@@ -1,17 +1,45 @@
-# kuis_app
+# Kuis Pintar
 
-A new Flutter project.
+## Identitas Mahasiswa
+- **Nama:** (Octho Rivaldo Sinaga)
+- **NIM:** (241401122)
+- **Lab:** Pemrograman Mobile (PM 3)
 
-## Getting Started
+## Informasi Aplikasi
+- **Nama Aplikasi:** Kuis Pintar
+- **Deskripsi:** Aplikasi kuis pilihan ganda pengetahuan umum. Pengguna memasukkan nama, menjawab 10 soal, lalu melihat skor akhir atas namanya.
+- **Fitur:**
+  - Input nama dengan validasi
+  - 10 soal pilihan ganda dengan progres soal
+  - Umpan balik langsung: jawaban benar hijau, salah merah
+  - Skor akhir, persentase, dan pesan sesuai nilai
+  - Ulangi kuis dan kembali ke beranda
+  - Progres tetap aman saat layar dirotasi
+  - Mode gelap dan terang
+  - Tampilan adaptif untuk HP, tablet, dan web
 
-This project is a starting point for a Flutter application.
+## Teknologi
+Flutter, Dart, package `provider` (state management).
 
-A few resources to get you started if this is your first Flutter project:
+## Cara Menjalankan
+    flutter pub get
+    flutter run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Dokumentasi
+### Credit Aset
+- Font: Poppins (Indian Type Foundry) via Google Fonts, SIL Open Font License
+- Ikon: Material Icons (Google)
+- Logo dan ikon aplikasi: dibuat sendiri
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screenshot
+| Beranda | Kuis | Hasil |
+|---|---|---|
+| ![Beranda](screenshots/home.png) | ![Kuis](screenshots/quiz.png) | ![Hasil](screenshots/result.png) |
+
+
+
+### Mockup / Prototype
+(link Figma)
+
+### Video Presentasi
+(link Google Drive)
