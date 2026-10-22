@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
+import 'package:provider/provider.dart';
+import '../providers/quiz_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,7 +14,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _nameController = TextEditingController();
+  late final TextEditingController _nameController =
+    TextEditingController(text: context.read<QuizProvider>().playerName);
 
   @override
   void dispose() {
@@ -21,13 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _mulaiKuis() {
-    if (!_formKey.currentState!.validate()) return;
+  if (!_formKey.currentState!.validate()) return;
 
-    // Sementara: navigasi ke halaman kuis dibuat di Tahap 6.
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Halo, ${_nameController.text.trim()}!')),
-    );
-  }
+  context.read<QuizProvider>().start(_nameController.text);
+
+  
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(content: Text('Halo, ${_nameController.text.trim()}!')),
+  );
+}
 
   @override
   Widget build(BuildContext context) {
